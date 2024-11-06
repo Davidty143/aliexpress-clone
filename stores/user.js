@@ -3,8 +3,8 @@ import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    isMenuOverlay: false,
-    isLoading: false,
+    isMenuOverlay: true,
+    isLoading: true,
     cart: [],
     checkout: []
   }),

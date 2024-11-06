@@ -10,9 +10,7 @@
 
             <div class="text-center my-6">Login / Register</div>
 
-            <button 
-                @click="login('google')"
-                class="
+            <button @click="login('google')" class="
                     flex 
                     items-center 
                     justify-center 
@@ -24,15 +22,12 @@
                     rounded-full
                     text-lg
                     font-semibold
-                "
-            >
+                ">
                 <img class="w-full max-w-[30px]" src="/google-logo.png">
                 <div>Google</div>
             </button>
 
-            <button 
-                @click="login('github')"
-                class="
+            <button @click="login('github')" class="
                 mt-4
                     flex 
                     items-center 
@@ -45,8 +40,7 @@
                     rounded-full
                     text-lg
                     font-semibold
-                "
-            >
+                ">
                 <img class="w-full max-w-[30px]" src="/github-logo.png">
                 <div>Github</div>
             </button>
@@ -66,9 +60,9 @@ watchEffect(() => {
 })
 
 const login = async (prov) => {
-  const { data, error } = await client.auth.signInWithOAuth({
-    provider: prov,
-    redirectTo: window.location.origin
-  })
+    const { data, error } = await client.auth.signInWithOAuth({
+        provider: prov,
+        redirectTo: window.location.origin
+    })
 }
 </script>
